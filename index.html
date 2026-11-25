@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md Jahangir Alam | Flutter Developer &amp; AI Automation Specialist</title>
+<meta name="description" content="Md Jahangir Alam builds Flutter mobile applications and intelligent AI agent and n8n automation systems for businesses, startups and entrepreneurs worldwide.">
+<meta property="og:title" content="Md Jahangir Alam | Flutter Developer &amp; AI Automation Specialist">
+<meta property="og:description" content="Building Smart Apps. Automating the Future.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F3F5F8; --white:#FFFFFF; --ink:#0F1A2B; --ink-2:#2D3A50; --muted:#47546A;
+  --line:#DCE1E8; --line-2:#C9D1DC; --tint:#EAEFF7; --accent:#2B59FF; --accent-soft:#8FB0FF;
+  --good:#12A37F; --navy-line:#2A3A56; --on-navy:#B6C2D6;
+  --display:'Space Grotesk',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:80px 24px}
+.eyebrow{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--accent)}
+.h2{font-family:var(--display);font-size:clamp(30px,4vw,42px);line-height:1.12;letter-spacing:-.015em;text-wrap:balance;font-weight:600}
+.lead{font-size:16px;color:var(--muted)}
+.head{display:flex;flex-direction:column;gap:12px;max-width:700px}
+.row{display:flex;flex-wrap:wrap;gap:20px}
+.row>*{min-width:0}
+.btn{display:inline-block;padding:14px 24px;border-radius:8px;font-weight:600;font-size:15px}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-line{border:1.5px solid var(--ink);padding:12.5px 24px}
+.chip{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid var(--line-2);border-radius:999px;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+
+/* nav */
+.nav{border-bottom:1px solid var(--line)}
+.nav-in{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.mono-badge{width:40px;height:40px;border-radius:10px;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700}
+.brand-t{display:flex;flex-direction:column;line-height:1.25}
+.brand-t b{font-family:var(--display);font-weight:600;font-size:16px}
+.brand-t span{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px;font-size:14px;font-weight:500;color:var(--ink-2)}
+.links .hire{background:var(--accent);color:#fff;padding:10px 18px;border-radius:8px;font-weight:600}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-top:72px}
+.hero-l{flex:1 1 440px;display:flex;flex-direction:column;gap:24px}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(40px,6vw,68px);line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+.hero .role{font-family:var(--display);font-size:22px;font-weight:500;color:var(--ink-2)}
+.hero .intro{font-size:17px;color:var(--muted);max-width:560px}
+.card-pipe{flex:1 1 340px;max-width:460px;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card-top .t{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.avail{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#0B6B55}
+.avail i{width:8px;height:8px;border-radius:50%;background:var(--good);display:block}
+.node{display:flex;gap:16px;align-items:flex-start}
+.node .rail{display:flex;flex-direction:column;align-items:center}
+.node .dot{width:14px;height:14px;border-radius:50%;display:block}
+.node .dot.o{border:3px solid var(--accent);background:var(--white)}
+.node .dot.f{background:var(--accent)}
+.node .dot.g{background:var(--good)}
+.node .stem{width:2px;height:44px;background:var(--line-2);display:block}
+.node .txt{margin-top:-4px}
+.node .k{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.node .v{font-size:15px;font-weight:500}
+.card-foot{border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted)}
+
+/* about */
+.band-white{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about{display:flex;flex-wrap:wrap;gap:56px}
+.about-l{flex:1 1 440px;display:flex;flex-direction:column;gap:20px}
+.about-l p{font-size:16px;color:var(--ink-2);max-width:620px}
+.tag{font-size:13px;font-weight:500;padding:7px 14px;background:var(--tint);border-radius:999px;color:#1A2740}
+.journey{flex:1 1 380px}
+.journey .lab{font-family:var(--mono);font-size:13px;color:var(--muted);padding-bottom:16px;display:block}
+.step{display:flex;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.step .n{font-family:var(--mono);font-size:14px;color:var(--accent);font-weight:500;width:28px;flex:none}
+.step h3{font-family:var(--display);font-size:19px;font-weight:600}
+.step p{font-size:15px;color:var(--muted)}
+
+/* skills */
+.stack{display:flex;flex-direction:column;gap:40px}
+.skill{flex:1 1 300px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.skill h3{font-family:var(--display);font-size:21px;font-weight:600}
+.skill p{font-size:14px;color:var(--muted)}
+.skill .chips span{font-family:var(--mono);font-size:12px;padding:6px 10px;border:1px solid var(--line-2);border-radius:6px;color:#1A2740}
+
+/* navy bands */
+.navy{background:var(--ink);color:var(--paper)}
+.navy .eyebrow{color:var(--accent-soft)}
+.navy .lead{color:var(--on-navy)}
+.svc{flex:1 1 320px;border:1px solid var(--navy-line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px;justify-content:space-between}
+.svc h3{font-family:var(--display);font-size:21px;font-weight:600;margin-bottom:10px}
+.svc p{font-size:15px;color:var(--on-navy)}
+.svc a{font-size:14px;font-weight:600;color:var(--accent-soft);padding-top:6px}
+
+/* projects */
+.proj{flex:1 1 320px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px;justify-content:space-between;transition:border-color .15s,transform .15s}
+.proj:hover{border-color:var(--accent);transform:translateY(-2px)}
+.proj .kind{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:500}
+.proj h3{font-family:var(--display);font-size:24px;font-weight:600;letter-spacing:-.01em;margin:10px 0}
+.proj p{font-size:15px;color:var(--muted)}
+.proj .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.proj .tags span{font-family:var(--mono);font-size:11px;padding:4px 8px;background:var(--tint);border-radius:5px;color:#1A2740}
+.proj .more{font-size:14px;font-weight:600}
+
+/* automation */
+.auto{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+.tabs{flex:1 1 300px;display:flex;flex-direction:column;gap:8px}
+.tab{text-align:left;padding:12px 16px;border-radius:10px;font-size:15px;font-weight:500;border:1px solid var(--line-2);background:var(--white);color:#1A2740}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.panel{flex:2 1 460px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:28px}
+.panel h3{font-family:var(--display);font-size:26px;font-weight:600}
+.flow{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
+.box{flex:1 1 150px;background:var(--white);border:1px solid var(--line-2);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.box.mid{background:var(--accent);color:#fff;border-color:var(--accent)}
+.box .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.box.mid .k{color:#fff;opacity:.85}
+.box .v{font-size:15px;font-weight:500}
+.panel .note{font-size:14px;color:var(--muted)}
+.panel .cta{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.panel .cta span{font-size:15px;color:var(--ink-2);flex:1 1 260px}
+.panel .cta a{background:var(--ink);color:var(--paper);padding:12px 20px;border-radius:8px;font-weight:600;font-size:14px}
+.fine{font-size:13px;color:var(--muted);max-width:720px}
+
+/* process */
+.proc{flex:1 1 220px;border-top:3px solid var(--ink);padding-top:20px;display:flex;flex-direction:column;gap:10px}
+.proc .k{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:500}
+.proc h3{font-family:var(--display);font-size:22px;font-weight:600}
+.proc p{font-size:15px;color:var(--muted)}
+
+/* why */
+.band-tint{background:var(--tint);border-top:1px solid var(--line)}
+.why{display:flex;flex-wrap:wrap;gap:48px}
+.why-l{flex:1 1 320px;display:flex;flex-direction:column;gap:12px}
+.why-r{flex:2 1 460px;display:flex;flex-wrap:wrap;gap:0 32px}
+.why-r div{flex:1 1 260px;min-width:0;padding:18px 0;border-top:1px solid #C3CCDA}
+.why-r h3{font-family:var(--display);font-size:18px;font-weight:600}
+.why-r p{font-size:14px;color:var(--ink-2)}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.contact-l{flex:1 1 420px;display:flex;flex-direction:column;gap:20px}
+.contact h2{font-family:var(--display);font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.02em;text-wrap:balance;font-weight:600}
+.contact-l .big{font-size:17px;color:var(--on-navy);max-width:560px}
+.mail-lab{font-family:var(--mono);font-size:12px;color:var(--accent-soft)}
+.mail{font-size:20px;font-weight:600;word-break:break-all}
+.contact .btns{display:flex;flex-wrap:wrap;gap:12px}
+.contact .btns .a{background:var(--accent);color:#fff}
+.contact .btns .b{border:1.5px solid var(--accent-soft);color:var(--paper);padding:12.5px 24px}
+.inq{flex:1 1 360px;border:1px solid var(--navy-line);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.inq .lab{font-family:var(--mono);font-size:12px;color:var(--accent-soft)}
+.inq .list{display:flex;flex-direction:column;gap:8px}
+.inq .list a{padding:12px 16px;border:1px solid var(--navy-line);border-radius:10px;font-size:15px;font-weight:500;display:flex;justify-content:space-between;gap:12px}
+.inq .list a:hover{border-color:var(--accent-soft)}
+.inq .list a span{color:var(--accent-soft)}
+.inq small{font-size:13px;color:var(--on-navy)}
+
+/* footer */
+footer{background:#0A1220;color:var(--on-navy)}
+.foot{max-width:1120px;margin:0 auto;padding:28px 24px;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;font-size:13px}
+.foot b{display:block;font-family:var(--display);font-size:15px;color:var(--paper);font-weight:600}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.proj{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#home">
+      <span class="mono-badge">JA</span>
+      <span class="brand-t"><b>Md Jahangir Alam</b><span>Flutter &amp; AI Automation</span></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#automation">AI Automation</a><a href="#contact">Contact</a>
+      <a class="hire" href="#contact">Hire me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="wrap hero">
+  <div class="hero-l">
+    <span class="eyebrow">Bangladesh · Working worldwide</span>
+    <h1>Hello, I'm Md Jahangir Alam.</h1>
+    <p class="role">Flutter Developer &amp; AI Automation Specialist</p>
+    <p class="intro">I build mobile applications and intelligent AI automation systems that help businesses grow faster, work smarter and get more done.</p>
+    <div class="chips" style="gap:12px;padding-top:8px">
+      <a class="btn btn-solid" href="#portfolio">Explore my work</a>
+      <a class="btn btn-line" href="#contact">Let's work together</a>
+    </div>
+    <div class="chips" style="padding-top:8px">
+      <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Firebase</span><span class="chip">AI Agents</span><span class="chip">n8n</span><span class="chip">APIs</span>
+    </div>
+  </div>
+  <div class="card-pipe" aria-label="Example automation workflow">
+    <div class="card-top"><span class="t">workflow / live pattern</span><span class="avail"><i></i>Available for new projects</span></div>
+    <div>
+      <div class="node"><div class="rail"><span class="dot o"></span><span class="stem"></span></div><div class="txt"><div class="k">Trigger</div><div class="v">Message, form, schedule, webhook</div></div></div>
+      <div class="node"><div class="rail"><span class="dot f"></span><span class="stem"></span></div><div class="txt"><div class="k">AI agent</div><div class="v">Understands, decides, drafts</div></div></div>
+      <div class="node"><div class="rail"><span class="dot o"></span><span class="stem"></span></div><div class="txt"><div class="k">Integration</div><div class="v">n8n, APIs, databases, channels</div></div></div>
+      <div class="node"><div class="rail"><span class="dot g"></span></div><div class="txt"><div class="k">Action</div><div class="v">Reply, update, notify, record</div></div></div>
+    </div>
+    <div class="card-foot">Building Smart Apps. Automating the Future.</div>
+  </div>
+</section>
+
+<div class="band-white" id="about">
+  <section class="wrap about">
+    <div class="about-l">
+      <span class="eyebrow">About me</span>
+      <h2 class="h2">A developer who builds the product, not just the screens.</h2>
+      <p>I am a Flutter developer and AI automation specialist focused on building beautiful, scalable mobile applications and intelligent automation systems.</p>
+      <p>I combine modern mobile development with AI-powered automation to help businesses streamline operations, improve productivity and create better digital experiences. My goal is to turn ideas into practical digital solutions that make a real impact.</p>
+      <div class="chips" style="padding-top:4px">
+        <span class="tag">Mobile application development</span><span class="tag">Cross-platform Flutter development</span><span class="tag">AI-powered solutions</span><span class="tag">Intelligent business automation</span><span class="tag">API integration</span><span class="tag">Problem-solving</span><span class="tag">Continuous learning</span>
+      </div>
+    </div>
+    <div class="journey">
+      <span class="lab">The journey</span>
+      <div class="step"><span class="n">01</span><div><h3>Foundations in code</h3><p>Started with programming fundamentals, logic and a habit of solving problems before writing a single line.</p></div></div>
+      <div class="step"><span class="n">02</span><div><h3>The Flutter path</h3><p>Focused on Flutter and Dart to build one codebase that ships polished, native-feeling apps on Android and iOS.</p></div></div>
+      <div class="step"><span class="n">03</span><div><h3>Real products with Firebase</h3><p>Moved into production patterns: authentication, real-time data, file storage and push notifications.</p></div></div>
+      <div class="step"><span class="n">04</span><div><h3>AI agents &amp; automation</h3><p>Extended from apps into intelligent systems: AI agents and n8n workflows that connect apps, APIs and business tools.</p></div></div>
+    </div>
+  </section>
+</div>
+
+<section class="wrap stack" id="skills">
+  <div class="head">
+    <span class="eyebrow">Technical skills</span>
+    <h2 class="h2">Three disciplines, one delivery standard.</h2>
+    <p class="lead">Mobile engineering, AI agent architecture and workflow automation, used together instead of as separate hobbies.</p>
+  </div>
+  <div class="row">
+    <div class="skill"><div><h3>Mobile App Development</h3><p>Native-feeling, cross-platform products built with one codebase.</p></div>
+      <div class="chips"><span>Flutter</span><span>Dart</span><span>Android Development</span><span>iOS Development</span><span>Firebase</span><span>REST API Integration</span><span>Responsive UI/UX</span><span>Git &amp; GitHub</span></div></div>
+    <div class="skill"><div><h3>AI Agent Development</h3><p>Assistants that reason over your data and act on your behalf.</p></div>
+      <div class="chips"><span>AI Agent Architecture</span><span>OpenAI API</span><span>Google Gemini API</span><span>AI Chatbots</span><span>Conversational AI</span><span>Intelligent Business Assistants</span></div></div>
+    <div class="skill"><div><h3>Automation &amp; Integration</h3><p>Workflows that remove repetitive work from the business day.</p></div>
+      <div class="chips"><span>n8n Workflow Automation</span><span>WhatsApp Automation</span><span>Telegram Automation</span><span>Facebook Automation</span><span>Instagram Automation</span><span>LinkedIn Automation</span><span>YouTube Automation</span><span>Webhooks</span><span>API Integrations</span></div></div>
+  </div>
+</section>
+
+<div class="navy" id="services">
+  <section class="wrap stack">
+    <div class="head">
+      <span class="eyebrow">Services</span>
+      <h2 class="h2">What I can build for your business.</h2>
+      <p class="lead">From a first mobile release to a fully automated back office, scoped clearly and built properly.</p>
+    </div>
+    <div class="row">
+      <div class="svc"><div><h3>Flutter App Development</h3><p>Modern Android and iOS applications built with Flutter and Dart: one codebase, two platforms, a single consistent experience.</p></div><a href="mailto:mdjahangir424@outlook.com?subject=Flutter%20App%20Development">Discuss this service →</a></div>
+      <div class="svc"><div><h3>Custom Mobile App Development</h3><p>Business ideas turned into functional, scalable mobile applications designed around how your users actually work.</p></div><a href="mailto:mdjahangir424@outlook.com?subject=Custom%20Mobile%20App%20Development">Discuss this service →</a></div>
+      <div class="svc"><div><h3>AI Agent Development</h3><p>Intelligent AI agents for customer support, business operations and conversational experiences.</p></div><a href="mailto:mdjahangir424@outlook.com?subject=AI%20Agent%20Development">Discuss this service →</a></div>
+      <div class="svc"><div><h3>n8n Workflow Automation</h3><p>Automated workflows that eliminate repetitive tasks and improve business efficiency.</p></div><a href="mailto:mdjahangir424@outlook.com?subject=n8n%20Workflow%20Automation">Discuss this service →</a></div>
+      <div class="svc"><div><h3>WhatsApp &amp; Social Media Automation</h3><p>Automation for WhatsApp, Facebook, Instagram, Telegram, LinkedIn and YouTube: enquiries, replies and content on autopilot.</p></div><a href="mailto:mdjahangir424@outlook.com?subject=WhatsApp%20and%20Social%20Media%20Automation">Discuss this service →</a></div>
+      <div class="svc"><div><h3>API Integration</h3><p>Applications, business platforms, AI models and third-party services connected into one reliable flow of data.</p></div><a href="mailto:mdjahangir424@outlook.com?subject=API%20Integration">Discuss this service →</a></div>
+    </div>
+  </section>
+</div>
+
+<section class="wrap stack" id="portfolio">
+  <div class="head">
+    <span class="eyebrow">Featured projects</span>
+    <h2 class="h2">Work built end to end.</h2>
+    <p class="lead">Mobile products and automation systems, each designed, developed and delivered as a complete solution.</p>
+  </div>
+  <div class="row">
+    <a class="proj" href="https://github.com/mdjahangir424/skillswap">
+      <div><span class="kind">Community mobile app</span><h3>SkillSwap</h3><p>SkillSwap connects people who want to learn a skill with people who want to teach one. Built with Flutter and a full Firebase backend.</p></div>
+      <div><div class="tags"><span>Flutter</span><span>Dart</span><span>Firebase Authentication</span><span>Cloud Firestore</span></div><span class="more">View project →</span></div>
+    </a>
+    <a class="proj" href="https://mdjahangir424.base44.app/projects/hisab-khata">
+      <div><span class="kind">Finance app concept</span><h3>Hisab Khata</h3><p>A digital accounting application concept for managing daily transactions, expenses, financial records and balances in one clear place.</p></div>
+      <div><div class="tags"><span>Flutter</span><span>Dart</span><span>Local data storage</span><span>Responsive UI</span></div><span class="more">View project →</span></div>
+    </a>
+    <a class="proj" href="https://mdjahangir424.base44.app/projects/ai-automation-systems">
+      <div><span class="kind">AI &amp; workflow automation</span><h3>Custom AI Automation Systems</h3><p>Systems built with n8n, AI APIs, webhooks and third-party integrations, turning manual, repetitive processes into reliable automated flows.</p></div>
+      <div><div class="tags"><span>n8n</span><span>OpenAI API</span><span>Google Gemini API</span><span>Webhooks</span></div><span class="more">View project →</span></div>
+    </a>
+  </div>
+</section>
+
+<div class="band-white" id="automation">
+  <section class="wrap stack">
+    <div class="head">
+      <span class="eyebrow">AI automation</span>
+      <h2 class="h2">Intelligent automation. Limitless possibilities.</h2>
+      <p class="lead">AI agents and automated workflows that connect the platforms your business already runs on, so repetitive work stops needing a person. Pick a pattern to see how it runs.</p>
+    </div>
+    <div class="auto">
+      <div class="tabs" role="tablist" aria-label="Automation patterns" id="tabs"></div>
+      <div class="panel" role="tabpanel" aria-live="polite">
+        <h3 id="p-title"></h3>
+        <div class="flow">
+          <div class="box"><span class="k">Trigger</span><span class="v" id="p-trigger"></span></div>
+          <div class="box mid"><span class="k">Process</span><span class="v" id="p-process"></span></div>
+          <div class="box"><span class="k">Action</span><span class="v" id="p-action"></span></div>
+        </div>
+        <p class="note">Every automation follows the same skeleton: a trigger starts it, an AI step adds judgement, integrations connect your tools, and a concrete action finishes the job.</p>
+        <div class="cta"><span>Tell me the process you repeat every week and I'll map the automation for it.</span><a href="mailto:mdjahangir424@outlook.com?subject=Custom%20automation%20request">Request a custom automation</a></div>
+      </div>
+    </div>
+    <p class="fine">These are demonstrations of the automation patterns I build. Deployed client systems are private and are never presented as these examples.</p>
+  </section>
+</div>
+
+<section class="wrap stack">
+  <div class="head">
+    <span class="eyebrow">Work process</span>
+    <h2 class="h2">A clear path from idea to delivery.</h2>
+    <p class="lead">You always know which stage we are in and what happens next.</p>
+  </div>
+  <div class="row">
+    <div class="proc"><span class="k">Stage 1</span><h3>Discover</h3><p>Understand your goals and requirements: the real problem, the users, and what success looks like.</p></div>
+    <div class="proc"><span class="k">Stage 2</span><h3>Strategize</h3><p>Plan the best technical approach and solution architecture before any code is written.</p></div>
+    <div class="proc"><span class="k">Stage 3</span><h3>Develop</h3><p>Build, integrate, test and optimize, with visible progress at every stage.</p></div>
+    <div class="proc"><span class="k">Stage 4</span><h3>Deliver</h3><p>Deliver the completed solution and provide support according to the project agreement.</p></div>
+  </div>
+</section>
+
+<div class="band-tint">
+  <section class="wrap why">
+    <div class="why-l">
+      <span class="eyebrow">Why work with me</span>
+      <h2 class="h2">Engineering discipline, client-first delivery.</h2>
+      <p class="lead" style="color:var(--ink-2)">One partner on your project, not a hand-off between three agencies.</p>
+    </div>
+    <div class="why-r">
+      <div><h3>Client-focused development</h3><p>Every decision is measured against your business goal, not a framework preference.</p></div>
+      <div><h3>Modern technologies</h3><p>Flutter, Firebase, AI models and n8n: the current generation of tools.</p></div>
+      <div><h3>Clean, maintainable code</h3><p>Structured and readable, so your product stays easy to extend.</p></div>
+      <div><h3>Scalable solutions</h3><p>Architecture that holds up when usage, data and team size grow.</p></div>
+      <div><h3>Clear communication</h3><p>Plain updates, honest timelines and no silence between milestones.</p></div>
+      <div><h3>Reliable delivery</h3><p>Scope agreed up front, delivered as agreed.</p></div>
+      <div><h3>Continuous improvement</h3><p>Performance, usability and quality reviewed after launch, not forgotten.</p></div>
+    </div>
+  </section>
+</div>
+
+<div class="navy" id="contact">
+  <section class="wrap contact" style="padding-top:88px;padding-bottom:88px">
+    <div class="contact-l">
+      <span class="eyebrow">Contact</span>
+      <h2>Let's build something worth shipping.</h2>
+      <p class="big">Tell me what you want to build: a Flutter app, an AI agent, an automation, or all three. I reply to every serious inquiry with a clear next step.</p>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:8px">
+        <span class="mail-lab">Email</span>
+        <span class="mail">mdjahangir424@outlook.com</span>
+        <span style="font-size:14px;color:var(--on-navy)">Bangladesh · Available for new projects</span>
+      </div>
+      <div class="btns">
+        <a class="btn a" href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry">Email me</a>
+        <a class="btn b" href="https://github.com/mdjahangir424">GitHub</a>
+      </div>
+    </div>
+    <div class="inq">
+      <span class="lab">Start with the project type</span>
+      <div class="list">
+        <a href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry%3A%20Flutter%20App%20Development">Flutter App Development <span>→</span></a>
+        <a href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry%3A%20Custom%20Mobile%20App">Custom Mobile App <span>→</span></a>
+        <a href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry%3A%20AI%20Agent%20Development">AI Agent Development <span>→</span></a>
+        <a href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry%3A%20n8n%20Workflow%20Automation">n8n Workflow Automation <span>→</span></a>
+        <a href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry%3A%20Social%20Media%20Automation">Social Media Automation <span>→</span></a>
+        <a href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry%3A%20API%20Integration">API Integration <span>→</span></a>
+        <a href="mailto:mdjahangir424@outlook.com?subject=Project%20inquiry">Something else <span>→</span></a>
+      </div>
+      <small>Each option opens an email with the project type filled in. Your details are used only to reply to your inquiry.</small>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <span><b>Md Jahangir Alam</b>Flutter Developer | AI Agent &amp; Automation Specialist</span>
+    <span>Building Smart Apps. Automating the Future.</span>
+    <span>© 2026 Md Jahangir Alam · Bangladesh · Remote worldwide</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var patterns = [
+    ['AI Customer Support Agent', 'New support message', 'AI agent reads context and drafts an answer', 'Reply sent and ticket tagged'],
+    ['WhatsApp AI Assistant', 'Incoming WhatsApp chat', 'AI understands intent and checks your data', 'Instant reply or handover to a human'],
+    ['Telegram AI Bot', 'Bot command', 'AI processes the request and formats a result', 'Answer delivered in the chat'],
+    ['Social Media Content Automation', 'Scheduled trigger', 'AI drafts captions and variations', 'Posts queued across channels'],
+    ['Lead Generation Automation', 'New form or ad lead', 'Lead enriched and scored', 'Added to CRM and sales notified'],
+    ['Automated Email Workflows', 'New inquiry or status change', 'AI drafts a tailored message', 'Email sent and logged'],
+    ['Business Process Automation', 'New order or record', 'Data validated and synced between tools', 'Team notified, documents updated']
+  ];
+  var tabs = document.getElementById('tabs');
+  var buttons = [];
+  function show(i) {
+    var p = patterns[i];
+    document.getElementById('p-title').textContent = p[0];
+    document.getElementById('p-trigger').textContent = p[1];
+    document.getElementById('p-process').textContent = p[2];
+    document.getElementById('p-action').textContent = p[3];
+    buttons.forEach(function (b, j) { b.setAttribute('aria-selected', j === i ? 'true' : 'false'); });
+  }
+  patterns.forEach(function (p, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'tab';
+    b.setAttribute('role', 'tab');
+    b.textContent = p[0];
+    b.addEventListener('click', function () { show(i); });
+    tabs.appendChild(b);
+    buttons.push(b);
+  });
+  show(0);
+})();
+</script>
+</body>
+</html>
